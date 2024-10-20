@@ -1,0 +1,40 @@
+div {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+div input {
+    border-radius: 10rem 0 0 10rem;
+    height: 3 rem;
+    width: 20rem;
+    border: none;
+    background-color: #f1f1f1;
+    padding: 1.2rem;
+    font-size: 1rem;
+    outline: none;
+}
+
+button {
+    color: black;
+    background-color: rgb(250, 164, 6);
+    height: 4rem;
+    width: 8rem;
+    font-size: 1rem;
+    border-radius: 0 10rem 10rem 0;
+    border: none;
+    transition: opacity 0.3s;
+}
+div button:hover {
+    opacity: 1;
+    cursor: pointer;
+    color: blue; 
+    background-color: orange; 
+}
+
+
+div button:hover ~ input {
+    background-color: orange; 
+    color: blue; 
+}

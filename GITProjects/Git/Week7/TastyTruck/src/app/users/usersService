@@ -1,0 +1,65 @@
+var usersModel = require('./usersModel');
+var key = '123456789trytryrtyr';
+var encryptor = require('simple-encryptor')(key);
+
+module.exports.createusersDBService = (usersDetails) => {
+   return new Promise(function myFn(resolve, reject) {
+       var usersModelData = new usersModel();
+       usersModelData.firstname = usersDetails.firstname;
+       usersModelData.lastname = usersDetails.lastname;
+       usersModelData.email = usersDetails.email;
+       usersModelData.password = usersDetails.password;
+       var encrypted = encryptor.encrypt(usersDetails.password);
+       usersModelData.password = encrypted;
+       usersModelData.save(function resultHandle(error, result) {
+           if (error) {
+               reject(false);
+           } else {
+               resolve(true);
+           }
+       });
+   });
+}
+
+module.exports.loginuserDBService = (usersDetails) => {
+   return new Promise(function myFn(resolve, reject) {
+      usersModel.findOne({ email: usersDetails.email }, function getresult(errorvalue, result) {
+         if (errorvalue) {
+            reject({status: false, msg: "Invalid Data"});
+         } else {
+            if (result != undefined && result != null) {
+               var decrypted = encryptor.decrypt(result.password);
+               if (decrypted == usersDetails.password) {
+                  resolve({status: true, msg: "Users Validated Successfully"});
+               } else {
+                  reject({status: false, msg: "Users Validation Failed"});
+               }
+            } else {
+               reject({status: false, msg: "Users Error Details"});
+            }
+         }
+      });
+   });
+}
+
+// POST request for login
+module.exports.loginuserPostDBService = (usersDetails) => {
+   return new Promise(function myFn(resolve, reject) {
+      usersModel.findOne({ email: usersDetails.email }, function getresult(errorvalue, result) {
+         if (errorvalue) {
+            reject({status: false, msg: "Invalid Data"});
+         } else {
+            if (result != undefined && result != null) {
+               var decrypted = encryptor.decrypt(result.password);
+               if (decrypted == usersDetails.password) {
+                  resolve({status: true, msg: "Users Validated Successfully"});
+               } else {
+                  reject({status: false, msg: "Users Validation Failed"});
+               }
+            } else {
+               reject({status: false, msg: "Users Error Details"});
+            }
+         }
+      });
+   });
+}

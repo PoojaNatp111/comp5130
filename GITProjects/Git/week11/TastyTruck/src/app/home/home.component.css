@@ -1,0 +1,105 @@
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+}
+
+ul li {
+  margin: 10px;
+  margin-left: 40px;
+}
+
+ul li a img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+}
+
+ul li a {
+  height: 20rem;
+  width: 20rem;
+  border: 1px solid whitesmoke;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #e72929;
+  font-size: 15px;
+  text-decoration: none; 
+  transition: opacity 0.3s; 
+}
+
+ul li a:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.about {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  color: #e72929; 
+}
+
+.name-and-favorite {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.favorite {
+  font-size: 0.8em; 
+  margin-left: auto; 
+  color: #e72929;
+}
+
+.favorite.not {
+  color: black;
+}
+
+.origin-and-cook-time {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  margin-top: -5px; 
+}
+
+.origin {
+  font-size: 0.8em; 
+  color: black;
+}
+
+.cook-time {
+  display: flex;
+  align-items: center;
+  font-size: 0.8em; 
+  color: black; 
+}
+
+.cook-time span {
+  margin-right: 5px;
+}
+
+.products-item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.price {
+  font-weight: bold;
+  color: #e72929;
+  text-align: left;
+}

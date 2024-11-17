@@ -1,0 +1,27 @@
+<div class="payment-container">
+    <h2>Payment Details</h2>
+    
+    <form #paymentForm="ngForm" (ngSubmit)="processPayment()">
+        <div class="form-group">
+            <label for="cardNumber">Card Number</label>
+            <input type="text" id="cardNumber" [(ngModel)]="cardDetails.cardNumber" name="cardNumber" maxlength="16" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="cardHolder">Cardholder Name</label>
+            <input type="text" id="cardHolder" [(ngModel)]="cardDetails.cardHolder" name="cardHolder" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="expiryDate">Expiry Date</label>
+            <input type="text" id="expiryDate" [(ngModel)]="cardDetails.expiryDate" name="expiryDate" placeholder="MM/YY" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="cvv">CVV</label>
+            <input type="password" id="cvv" [(ngModel)]="cardDetails.cvv" name="cvv" maxlength="3" required>
+        </div>
+        
+        <button type="submit" class="pay-button" [disabled]="!paymentForm.valid">Pay Now</button>
+    </form>
+</div>

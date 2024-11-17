@@ -1,0 +1,26 @@
+div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+div a {
+    background-color: #eee9e9;
+    padding: .4rem .6rem;
+    margin: .2rem .15rem;
+    border-radius: 10rem;
+    color: blue;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none; 
+}
+
+div a:hover {
+    background-color: orange; 
+    color: rgb(36, 6, 146);
+}
+
+div a.selected {
+    background-color: orange;
+    color: rgb(36, 6, 146); 
+}

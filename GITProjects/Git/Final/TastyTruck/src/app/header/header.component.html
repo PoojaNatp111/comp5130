@@ -1,0 +1,23 @@
+<header>
+    <div class="container">
+        <a href="#" routerLink="/" class="logo">TastyTruck 🚚</a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li *ngIf="!username"><a href="/login">Login</a></li>
+                <li *ngIf="!username"><a href="/register">Register</a></li>
+                <li *ngIf="username"><a href="/MyorderComponent">My Orders</a></li>
+                <li *ngIf="!username"><a href="/admin-dashboard" target="_blank">Admin Dashboard</a></li>
+            </ul>
+        </nav>
+        <nav class="cart-nav">
+            <ul>
+                <li>
+                    <a href="/cart-page">Cart 🛒 <span class="cart-count">{{cart.items.length}}</span></a>
+                    <span *ngIf="username">Hello, {{ username }}!</span>
+                    <div><button *ngIf="username" (click)="signOut()" class="btn btn-secondary">Sign Out</button></div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>

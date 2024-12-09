@@ -1,0 +1,39 @@
+<h3 class="centered-heading">Newly Added Food Items</h3>
+
+<ul>
+  <li *ngFor="let item of foodItems" class="fetched-food-item">
+    <a routerLink="/fetched-food/{{item._id}}">
+      <div
+        [ngStyle]="{
+          backgroundColor: item.imageUrl ? 'transparent' : generateRandomColor()
+        }"
+        style="width: 100%; height: 250px; border-radius: 8px; display: flex; justify-content: center; align-items: center;"
+      >
+        <img
+          *ngIf="item.imageUrl"
+          [src]="item.imageUrl"
+          alt="Fetched food image"
+          style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;"
+        />
+      </div>
+      <div class="about fetched-food-item-details">
+        <div class="name-and-favorite">
+          <div class="name">{{ item.itemName }}</div>
+        </div>
+        <p *ngIf="item.rating">Rating: {{ item.rating }} ﹡</p>
+        <div class="origin-and-cook-time">
+          <div class="cook-time">
+            <span>🕒</span>
+            {{ item.timeToPrepare }}
+          </div>
+        </div>
+        <div class="products-item-footer">
+          <div class="price"><span>$</span>{{ item.price }}.00</div>
+        </div>
+      </div>
+    </a>
+    <div class="item-actions">
+      <button class="remove-btn" (click)="removeItem(item)">Remove</button>
+    </div>
+  </li>
+</ul>

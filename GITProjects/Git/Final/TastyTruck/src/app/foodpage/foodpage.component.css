@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-left:100px ;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 20px;    
+}
+
+.container img {
+    width: 400px;             
+    height: 400px;             
+    object-fit: cover;         
+    border-radius: 10px;       
+}
+
+.details {
+    background-color: #f9f9f9;  
+    padding: 20px;             
+    border-radius: 10px;        
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.header {
+    display: flex;             
+    justify-content: space-between; 
+    align-items: center;        
+    margin-bottom: 15px;        
+}
+
+.name {
+    font-size: 1.5em;            
+    font-weight: bold;          
+}
+
+.favorite {
+    font-size: 1.5em;           
+    color: red;                 
+}
+.recipe{
+    font-size: 14px;
+}
+.ingredents{
+    font-size: 14px;
+}
+.star p{
+    font-size: 14px;
+    margin-bottom: 10px;  
+    color: red;
+}
+.origin,
+.cooktime{
+    margin-bottom: 10px;       
+    font-size: 0.9em; 
+}
+.price {
+    margin-bottom: 10px;       
+    font-size: 1.2em; 
+
+}
+
+button {
+    background-color: rgb(221, 145, 5);   
+    color: white;                 
+    padding: 10px 15px;         
+    border: none;                
+    border-radius: 5px;         
+    cursor: pointer;              
+    transition: background-color 0.3s; 
+}
+.pri{
+    color: green
+}
+
+button:hover {
+    background-color: #af5e08;   
+}

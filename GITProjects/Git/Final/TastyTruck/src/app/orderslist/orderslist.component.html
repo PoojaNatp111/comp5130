@@ -1,0 +1,25 @@
+<div class="container">
+    <h2>Orders</h2>
+    <div *ngIf="orders.length === 0">
+      <p>No orders found.</p>
+    </div>
+    <table *ngIf="orders.length > 0" class="order-table">
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Total Price</th>
+          <th>Total Items</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <td>{{ order.orderId }}</td>
+          <td>${{ order.totalPrice }}</td>
+          <td>{{ order.totalItems }}</td>
+          <td>{{ order.createdAt | date: 'short' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

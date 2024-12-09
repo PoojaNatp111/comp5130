@@ -1,0 +1,8 @@
+<div *ngIf="tags">
+    <a *ngFor="let tag of tags" 
+       routerLink="/tag/{{tag.name}}" 
+       (click)="onTagClick(tag.name)"
+       [ngClass]="{'selected': selectedTag === tag.name}">
+       {{tag.name}} ({{tag.count}})
+    </a>
+</div>

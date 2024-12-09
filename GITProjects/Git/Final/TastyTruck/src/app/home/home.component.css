@@ -1,0 +1,157 @@
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+}
+
+ul li {
+  margin: 10px;
+  margin-left: 40px;
+}
+
+ul li a img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+}
+
+ul li a {
+  height: 20rem;
+  width: 20rem;
+  border: 1px solid whitesmoke;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #e72929;
+  font-size: 15px;
+  text-decoration: none; 
+  transition: opacity 0.3s; 
+}
+
+ul li a:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.about {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  color: #e72929; 
+}
+
+.name-and-favorite {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.favorite {
+  font-size: 0.8em; 
+  margin-left: auto; 
+  color: #e72929;
+}
+
+.favorite.not {
+  color: black;
+}
+
+.origin-and-cook-time {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  margin-top: -5px; 
+}
+
+.origin {
+  font-size: 0.8em; 
+  color: black;
+}
+
+.cook-time {
+  display: flex;
+  align-items: center;
+  font-size: 0.8em; 
+  color: black; 
+}
+
+.cook-time span {
+  margin-right: 5px;
+}
+
+.products-item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.price {
+  font-weight: bold;
+  color: #e72929;
+  text-align: left;
+}
+.fetched-food-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20rem; /* Matches the width of the food item container */
+}
+
+.fetched-food-item .add-to-cart-btn {
+  width: 100%; /* Matches the width of the food item container */
+  padding: 0.8rem;
+  background-color: rgb(251, 138, 9); /* Orange color */
+  color: white;
+  border: none;
+  border-radius: 0 0 1rem 1rem; /* Matches the container's border-radius */
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: center;
+  transition: background-color 0.3s, opacity 0.3s;
+}
+
+.fetched-food-item .add-to-cart-btn:hover {
+  opacity: 0.9;
+  background-color: rgb(251, 128, 0); /* Slightly darker on hover */
+}
+
+.centered-heading {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #e72929; /* Optional: match your theme */
+}
+.fetched-food-item .fetched-food-item-details {
+  padding: 0.5rem; /* Reduce padding */
+  gap: 0.3rem; /* Add spacing between elements */
+}
+
+.fetched-food-item .fetched-food-item-details .name-and-favorite {
+  margin-bottom: 0.3rem; /* Reduce margin below name */
+}
+
+.fetched-food-item .fetched-food-item-details p {
+  margin: 0.2rem 0; /* Reduce margin for rating */
+}
+
+.fetched-food-item .fetched-food-item-details .origin-and-cook-time {
+  margin: 0.2rem 0; /* Reduce margin for time */
+}
+
+.fetched-food-item .fetched-food-item-details .products-item-footer {
+  margin-top: 0.3rem; /* Reduce margin above price */
+}

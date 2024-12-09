@@ -1,0 +1,47 @@
+<div class="add-food-container">
+    <h2>Add Food Item</h2>
+    <form [formGroup]="addFoodForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="itemName">Item Name:</label>
+        <input id="itemName" formControlName="itemName" type="text" />
+        <div *ngIf="addFoodForm.get('itemName')?.invalid && addFoodForm.get('itemName')?.touched">
+          Item Name is required.
+        </div>
+      </div>
+  
+      <div>
+        <label for="rating">Rating (1-5):</label>
+        <input id="rating" formControlName="rating" type="number" />
+        <div *ngIf="addFoodForm.get('rating')?.invalid && addFoodForm.get('rating')?.touched">
+          Rating is required and must be between 1 and 5.
+        </div>
+      </div>
+  
+      <div>
+        <label for="price">Price:</label>
+        <input id="price" formControlName="price" type="number" />
+        <div *ngIf="addFoodForm.get('price')?.invalid && addFoodForm.get('price')?.touched">
+          Price is required and must be greater than 0.
+        </div>
+      </div>
+  
+      <div>
+        <label for="timeToPrepare">Time to Prepare:</label>
+        <input id="timeToPrepare" formControlName="timeToPrepare" type="text" />
+        <div *ngIf="addFoodForm.get('timeToPrepare')?.invalid && addFoodForm.get('timeToPrepare')?.touched">
+          Time to Prepare is required.
+        </div>
+      </div>
+  
+      <div>
+        <label for="cuisine">Cuisine (comma-separated):</label>
+        <input id="cuisine" formControlName="cuisine" type="text" />
+        <div *ngIf="addFoodForm.get('cuisine')?.invalid && addFoodForm.get('cuisine')?.touched">
+          Cuisine is required.
+        </div>
+      </div>
+  
+      <button type="submit" [disabled]="addFoodForm.invalid">Submit</button>
+    </form>
+  </div>
+  

@@ -1,0 +1,80 @@
+
+.add-item-button-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .add-item-button-container button {
+    background-color:  rgb(221, 145, 5);   
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-item-button-container button:hover {
+    background-color: orange
+  }
+  
+  /* Style for the form container */
+  .add-food-container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form heading */
+  .add-food-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Form labels and inputs */
+  .add-food-container label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  .add-food-container input {
+    width: calc(100% - 20px);
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .add-food-container button {
+    width: 100%;
+    background-color: #45da0a;
+    color: rgb(17, 16, 16);
+    border: none;
+    padding: 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-food-container button:hover {
+    background-color: #c0b717;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 600px) {
+    .add-food-container {
+      width: 90%;
+      padding: 15px;
+    }
+  }
+  
